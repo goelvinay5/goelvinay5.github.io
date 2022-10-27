@@ -6,41 +6,14 @@ import DSA from "./components/dsa";
 
 function App() {
   return (      
-      <div>
         <Router>
         <Navbar />
         <Routes>
-          <Route path='/home' component={Home} />
-          <Route path='/dsa' component={DSA} />
+          <Route path='/home' element={<Home/>} />
+          <Route path='/dsa' element={<DSA/>} />
         </Routes>
-      </Router>
-
-      <footer style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'bottom',
-        height: '100vh'
-        
-      }}>
-        <p className="footer-by">
-          A project by{" "}
-          <a
-            href="https://github.com/goelvinay5"
-            rel="noopener"
-            className="small-link"
-          >
-            Vinay Goel
-          </a>
-          <a
-            href="https://github.com/goelvinay5"
-            rel="noopener"
-            target="_blank"
-            className="no-link icon-github"
-            aria-label="Follow me on Github"
-          ></a>
-        </p>
-      </footer>
-      </div>
+         {/* Remember to run "npm run deploy" after you push the chnages for them to reflect on site */}
+      </Router>    
   );
 }
 
