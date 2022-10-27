@@ -10,28 +10,26 @@ const DSA = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://datastructuresjava.herokuapp.com/arrayrotation', {
-        mode: 'no-cors',
-        method: 'GET',
-        headers: {
-          Accept: 'application/json',
-        },
-      }).then(res => console.log(res));
-
-      if (!response.ok) {
-        throw new Error(`Error! status: ${response.status}`);
+        const response = await fetch('https://datastructuresjava.herokuapp.com/arrayrotation', {
+          method: 'GET',
+          headers: {
+            Accept: 'application/json',
+          },
+        });
+        console.log(response);
+        if (response.ok) {
+          const result = await response.json();
+          console.log('result is: ', JSON.stringify(result, null, 4));
+          setData(result);
+        }
+        else {
+          throw new Error(`Error! status: ${response.status}`);
+        }
+      } catch (err) {
+        setErr(err.message);
+      } finally {
+        setIsLoading(false);
       }
-
-      const result = await response.json();
-
-      console.log('result is: ', JSON.stringify(result, null, 4));
-
-      setData(result);
-    } catch (err) {
-      setErr(err.message);
-    } finally {
-      setIsLoading(false);
-    }
   };
 
   console.log(data);
@@ -54,15 +52,15 @@ const DSA = () => {
 <button onClick={handleClick}>Fetch data</button>
 {isLoading && <h2>Loading...</h2>}
 
-{data => {
-  return (
+
     <div key={data.Title}>
+      <h2>{data.Title}</h2>
+      <h2>{data.problem}</h2>
+      <h2>{data.solution}</h2>
       <h2>{data.input}</h2>
       <h2>{data.output}</h2>
       <br />
     </div>
-  );
-}}
       </div>
 
       <div>

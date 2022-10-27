@@ -1,7 +1,7 @@
 import React from "react";
 import AboutMe from "./AboutMe";
 
-const home = () => {
+const Home = () => {
   return (
     <div
       style={{
@@ -18,4 +18,4 @@ const home = () => {
   );
 }
 
-export default home;
+export default Home;
