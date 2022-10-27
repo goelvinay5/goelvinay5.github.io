@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-const dsa = () => {
+const DSA = () => {
 
   const [data, setData] = useState({data: []});
   const [isLoading, setIsLoading] = useState(false);
@@ -35,8 +35,6 @@ const dsa = () => {
   };
 
   console.log(data);
-
-
 
   return (
     <div
@@ -90,4 +88,4 @@ const dsa = () => {
   );
 }
 
-export default dsa;
+export default DSA;
