@@ -40,8 +40,8 @@ const DSA = () => {
           <select id="lang" onChange={handleClick}>
               <option value="select">Select</option>
               <option value="arrayrotation">Array Rotation</option>
-              <option value="arrayprefixsum">arrayprefixsum</option>
-              <option value="arraycarryforward">arraycarryforward</option>
+              <option value="arrayprefixsum">Array PrefixSum</option>
+              <option value="arraycarryforward">Array Carry Forward</option>
           </select><br/>
         </div>
         <div>

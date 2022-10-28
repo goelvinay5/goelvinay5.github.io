@@ -8,13 +8,15 @@ function App() {
   return (      
         <Router>
         <Navbar />
+        <div  style={{background: '#E8E8E8'}}>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/home' element={<Home/>} />
           <Route path='/dsa' element={<DSA/>} />
         </Routes>
-         {/* Remember to run "npm run deploy" after you push the chnages for them to reflect on site */}
-      </Router>    
+         {/* Remember to run "npm run deploy" after you push the chnages for them to reflect on site */} 
+      </div> 
+      </Router>  
   );
 }
 
