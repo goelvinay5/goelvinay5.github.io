@@ -54,8 +54,8 @@ const DSA = () => {
 
       <div key={data.Title} class = 'row'>
         <div class = 'col-sm-12'><div style={{marginLeft:'20px'}}><b>Title : {data.Title}</b></div></div><br/>
-        <div class = 'col-sm-6'><div style={{marginLeft:'20px'}}><b>Problem</b><br/><textarea disabled='true' style={{width:'100%', height:'400px'}}>{data.problem}</textarea></div></div>
-        <div class = 'col-sm-6'><b>Solution</b><br/><textarea disabled='true' style={{width:'98%', height:'400px'}}>{data.solution}</textarea></div>
+        <div class = 'col-sm-6'><div style={{marginLeft:'20px'}}><b>Problem</b><br/><textarea disabled='true' style={{width:'95%', height:'400px'}}>{data.problem}</textarea></div></div>
+        <div class = 'col-sm-6'><b>Solution</b><br/><textarea disabled='true' style={{width:'95%', height:'400px'}}>{data.solution}</textarea></div>
         <div class = 'col-sm-6'><div style={{marginLeft:'20px'}}><b>Input :</b> {data.input}</div></div>
         <div class = 'col-sm-6'><b>Output :</b> {data.output}</div>
       </div>

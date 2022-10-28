@@ -1,9 +1,10 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.css';
 
 const AboutMe = () =>  {
   return (
-        
-      <div>
+    <div class='row'>
+      <div class='col-sm-3' style={{marginLeft:'30px'}}>
         <ul>
           <li>👋 Hi, I’m Vinay Goel</li>
           <li>👀 I’m interested in Software Development</li>
@@ -58,6 +59,42 @@ const AboutMe = () =>  {
         <li>Situational Leadership</li>
         <li>Emotional Intelligence</li>
         </ul>
+        <p><strong>Tools</strong></p>
+        <p>Visual Studio
+          GitHub / TFS
+          Jenkins / Docker / Kafka
+          OpenShift / Azure
+          Sonar / Fortify
+          Rally / JIRA / Service-Now
+          Visio / <a href="http://Draw.io">Draw.io</a> / MS Project</p>
+        
+        <p><strong>Certifications</strong></p>
+        <p>Project Management Professional(PMP)®
+          Certified Scrum Master
+          Six Sigma Green Belt
+          Splunk Foundation
+          Jenkins Fundamentals
+          Microsoft</p>
+
+          <p><strong>SDLC Models</strong></p>
+        <p>Waterfall
+          Agile / Scrum
+          Hybrid</p>
+          
+          <p><strong>Types of Projects</strong></p>
+        <p>Business Process MgmtMigrationWeb Content ManagementMicrosoft .Net / Web BasedSingle Page Applications</p>
+
+        <p><strong>Languages</strong></p>
+        <p>English (Full Professional)Hindi (Native)</p>
+
+        <p><strong>Education</strong></p>
+        <p>GBTU - (B.Tech.), Information Technology · (2006 - 2010) - First Division</p>
+        
+        <p><strong>Academic Achievements</strong></p>
+        <p>Distinctive Performance in All India Science Olympiad 
+          GATE Qualified</p>
+        </div>
+        <div class='col-sm-8'>
         <h1>Vinay Goel</h1>
         <p>Bangalore, Karnataka, India</p>
         <h1>Summary</h1>
@@ -72,20 +109,8 @@ const AboutMe = () =>  {
         <li>Requirement Gathering and Elicitation, Project planning, Effort Estimation, team management and leadership, managing User stories, Milestones, features, team velocity, approving pull requests in GitHub, approving code deployment, ensuring application security</li>
         </ul>
         
-        <p>| ToolsVisual StudioGitHub / TFSJenkins / Docker / KafkaOpenShift / AzureSonar / FortifyRally / JIRA / Service-NowVisio / <a href="http://Draw.io">Draw.io</a> / MS Project</p>
-        <p>CertificationsProject Management Professional(PMP)®Certified Scrum MasterSix Sigma Green BeltSplunk FoundationJenkins FundamentalsMicrosoft</p>
-        <p>SDLC ModelsWaterfallAgile / ScrumHybrid</p>
-        <p>Types of ProjectsBusiness Process MgmtMigrationWeb Content ManagementMicrosoft .Net / Web BasedSingle Page Applications</p>
-        <p>LanguagesEnglish (Full Professional)Hindi (Native)</p>
-        <p>EducationGBTU - (B.Tech.), Information Technology · (2006 - 2010) - First Division</p>
-        <table>
-        <thead>
-        <tr>
-        <th>Academic AchievementsDistinctive Performance in All India Science Olympiad GATE Qualified</th>
-        </tr>
-        </thead>
-        </table>
-        <p>Experience</p>
+        
+        <h1>Experience</h1>
         <p>Harman Connected Services</p>
         <p>1 year 1 month</p>
         <h2>Technology Architect – Product Development</h2>
@@ -121,7 +146,7 @@ const AboutMe = () =>  {
         <p>October 2010 - October 2014 (4 years)</p>
         <p>Bangalore, India</p>
       </div>
-    
+    </div>
   );
 }
 
