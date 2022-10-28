@@ -1,7 +1,7 @@
 import {useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const DSA = () => {
-
   const [data, setData] = useState({data: []});
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState('');
@@ -27,52 +27,42 @@ const DSA = () => {
         }
       } catch (err) {
         setErr(err.message);
+        setData("");
       } finally {
         setIsLoading(false);
       }
   };
 
-  console.log(data);
-
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', height: '90vh'}}    >
-      <div>
-        {err && <h2>{err}</h2>}
-        <select id="lang" onChange={handleClick}>
-            <option value="arrayrotation">Array Rotation</option>
-            <option value="arrayprefixsum">arrayprefixsum</option>
-            <option value="arraycarryforward">arraycarryforward</option>
-          </select>
-        {isLoading && <h2>Loading...</h2>}
+    <div>
+      <div class = 'row'>
+        <div class = 'col-sm-12'><br/>
+          <select id="lang" onChange={handleClick}>
+              <option value="select">Select</option>
+              <option value="arrayrotation">Array Rotation</option>
+              <option value="arrayprefixsum">arrayprefixsum</option>
+              <option value="arraycarryforward">arraycarryforward</option>
+          </select><br/>
+        </div>
+        <div>
+          {isLoading && <h2>Loading...</h2>}
+        </div>
+        <div>
+          {err && <h2>{err}</h2>}
+        </div>
+      </div><br/>
 
-      <div key={data.Title} class = 'col-sm-12'>
-        <h2>{data.Title}</h2>
-        <h2>{data.problem}</h2>
-        <h2>{data.solution}</h2>
-        <h2>{data.input}</h2>
-        <h2>{data.output}</h2>
-        <br />
-    </div>
+      <div key={data.Title} class = 'row'>
+        <div class = 'col-sm-12'><b>Title : {data.Title}</b></div><br/>
+        <div class = 'col-sm-6'>Problem<br/><textarea style={{width:'90%', height:'400px'}}>{data.problem}</textarea></div>
+        <div class = 'col-sm-6'>Solution<br/><textarea style={{width:'90%', height:'400px'}}>{data.solution}</textarea></div>
+        <div class = 'col-sm-6'>Input : {data.input}</div>
+        <div class = 'col-sm-6'>Output : {data.output}</div>
       </div>
+        <br />
 
-      <div>
-        <p>
-          A project by{" "}
-          <a
-            href="https://github.com/goelvinay5"
-            rel="noopener"
-            className="small-link"
-          >
-            Vinay Goel
-          </a>
-          <a
-            href="https://github.com/goelvinay5"
-            rel="noopener"
-            target="_blank"
-            className="no-link icon-github"
-            aria-label="Follow me on Github"
-          ></a>
-        </p>
+      <div class = 'col-sm-12'>
+        <p>A project by{" "} <a href="https://github.com/goelvinay5"  rel="noopener"  className="small-link">Vinay Goel</a></p>
       </div>
     </div>
   );
