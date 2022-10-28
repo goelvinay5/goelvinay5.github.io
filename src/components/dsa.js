@@ -36,7 +36,7 @@ const DSA = () => {
   return (
     <div>
       <div class = 'row'>
-        <div class = 'col-sm-12'><br/>
+        <div class = 'col-sm-12' style={{marginLeft:'20px'}}><br/>
           <select id="lang" onChange={handleClick}>
               <option value="select">Select</option>
               <option value="arrayrotation">Array Rotation</option>
@@ -53,11 +53,11 @@ const DSA = () => {
       </div><br/>
 
       <div key={data.Title} class = 'row'>
-        <div class = 'col-sm-12'><b>Title : {data.Title}</b></div><br/>
-        <div class = 'col-sm-6'>Problem<br/><textarea style={{width:'90%', height:'400px'}}>{data.problem}</textarea></div>
-        <div class = 'col-sm-6'>Solution<br/><textarea style={{width:'90%', height:'400px'}}>{data.solution}</textarea></div>
-        <div class = 'col-sm-6'>Input : {data.input}</div>
-        <div class = 'col-sm-6'>Output : {data.output}</div>
+        <div class = 'col-sm-12'><div style={{marginLeft:'20px'}}><b>Title : {data.Title}</b></div></div><br/>
+        <div class = 'col-sm-6'><div style={{marginLeft:'20px'}}><b>Problem</b><br/><textarea disabled='true' style={{width:'100%', height:'400px'}}>{data.problem}</textarea></div></div>
+        <div class = 'col-sm-6'><b>Solution</b><br/><textarea disabled='true' style={{width:'98%', height:'400px'}}>{data.solution}</textarea></div>
+        <div class = 'col-sm-6'><div style={{marginLeft:'20px'}}><b>Input :</b> {data.input}</div></div>
+        <div class = 'col-sm-6'><b>Output :</b> {data.output}</div>
       </div>
         <br />
 
