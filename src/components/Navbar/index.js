@@ -15,7 +15,7 @@ return (
 		<Bars />
 		<NavMenu>
       <NavLink to='/home' activeStyle>Home</NavLink>
-	<NavLink to='/easyprogramming' activeStyle>Easy Programming</NavLink>
+	<NavLink to='https://goelvinay5.github.io/easyprogramming/' activeStyle>Easy Programming</NavLink>
 	<NavLink to='/organizer' activeStyle>Organizer</NavLink>
       <NavLink to='/dsa' activeStyle>DSA</NavLink>
       {/* Second Nav */}
